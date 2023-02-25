@@ -15,18 +15,17 @@ public class HelloController {
 
     @FXML
     private Button increase;
+    int number = 0;
 
     @FXML
     void decreaseButton(ActionEvent event) {
-        int num2 = 5;
-        int decrease = num2 - 1;
-        displayer.setText( decrease +" lower than its previous value");
+        number = number -1;
+        displayer.setText(number + " lower than its previous value which was "+ Integer.toString(number +1));
     }
 
     @FXML
     void increaseButton(ActionEvent event) {
-        int num2 = 5;
-        int increase = num2 + 1;
-        displayer.setText(increase + " higher than its previous value");
+        number = number +1;
+        displayer.setText(number + " higher than its previous value which was "+ Integer.toString(number -1));
     }
 }
